@@ -1,13 +1,16 @@
+DROP DATABASE IF EXISTS chat;
+
 CREATE DATABASE chat;
 
 USE chat;
 
 CREATE TABLE messages (
-  id INTEGER PRIMARY KEY AUTO_INCREMENT,
+  id INTEGER AUTO_INCREMENT,
   content TEXT NOT NULL,
-  user_id INTEGER,
-  room_id INTEGER,
-  createdAt TEXT NOT NULL,
+  username TEXT,
+  roomname TEXT,
+  -- createdAt TEXT NOT NULL,
+  PRIMARY KEY(id)
   -- FOREIGN KEY user_id REFERENCES users id,
   -- FOREIGN KEY room_id REFERENCES rooms id
 );

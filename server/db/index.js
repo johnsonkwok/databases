@@ -1,10 +1,12 @@
 var mysql = require('mysql');
 
 const dbConnection = mysql.createConnection({
-  user: 'root',
+  host: '',
+  user: 'student',
+  password: 'student',
   database: 'chat'
 });
-dbConnection.connect();
+// dbConnection.connect();
 
 module.exports = dbConnection;
 // Create a database connection and export it from this file.
