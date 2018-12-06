@@ -32,3 +32,6 @@ CREATE TABLE rooms (
  *    mysql -u root < server/schema.sql
  *  to create the database and the tables.*/
 
+
+
+
