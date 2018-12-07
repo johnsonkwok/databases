@@ -8,6 +8,7 @@ var Messages = {
   },
 
   add: function(message, callback = ()=>{}) {
+    console.log('message.id:  ', message.id);
     Messages._data[message.id] = message;
     callback(Messages.items());
   },
@@ -27,7 +28,7 @@ var Messages = {
 
   _conform: function(message) {
     // ensure each message object conforms to expected shape
-    message.text = message.content || '';
+    message.message = message.content || '';
     message.username = message.username || '';
     message.roomname = message.roomname || '';
     return message;
