@@ -4,7 +4,6 @@ module.exports = {
   messages: {
     get: function (callback) {
       dbConnection.query(`SELECT * from messages`, (err, result) => {
-        // console.log('RESULT:   ', result);
         callback(err, result);
       });
     }, // a function which produces all the messages

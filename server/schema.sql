@@ -7,12 +7,11 @@ USE chat;
 CREATE TABLE messages (
   id INTEGER AUTO_INCREMENT,
   content TEXT NOT NULL,
-  username TEXT,
-  roomname TEXT,
-  -- createdAt TEXT NOT NULL,
+  user_id INTEGER,
+  room_id INTEGER,
   PRIMARY KEY(id)
-  -- FOREIGN KEY user_id REFERENCES users id,
-  -- FOREIGN KEY room_id REFERENCES rooms id
+  FOREIGN KEY user_id REFERENCES users(id),
+  FOREIGN KEY room_id REFERENCES rooms(id)
 );
 
 CREATE TABLE users (

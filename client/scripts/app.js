@@ -24,10 +24,10 @@ var App = {
     Parse.readAll((data) => {
 
       // Don't bother to update if we have no messages
-      if (!data.results || !data.results.length) { return; }
-
-      Rooms.update(data.results, RoomsView.render);
-      Messages.update(data.results, MessagesView.render);
+      if (!data || !data.length) { return; }
+      console.log('data', data);
+      Rooms.update(data, RoomsView.render);
+      Messages.update(data, MessagesView.render);
       
       callback();
     });
