@@ -17,7 +17,8 @@ var Messages = {
     var length = Object.keys(Messages._data).length;
 
     for (let message of messages) {
-      Messages._data[message.id] = Messages._conform(message);
+      // Messages._data[message.id] = Messages._conform(message);
+      Messages._data[message.id] = message;
     }
 
     // only invoke the callback if something changed
@@ -26,12 +27,12 @@ var Messages = {
     }
   },
 
-  _conform: function(message) {
-    // ensure each message object conforms to expected shape
-    message.message = message.content || '';
-    message.username = message.username || '';
-    message.roomname = message.roomname || '';
-    return message;
-  }
+  // _conform: function(message) {
+  // ensure each message object conforms to expected shape
+  // message.message = message.content || '';
+  //   message.username = message.username || '';
+  //   message.roomname = message.roomname || '';
+  //   return message;
+  // }
   
 };

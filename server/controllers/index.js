@@ -15,6 +15,7 @@ module.exports = {
       models.messages.get( (err, result) => {
         if (err) {
           throw ('GET messages ERROR');
+          return;
         }
         // res.json(result);
         res.writeHead(200, headers);
@@ -28,6 +29,7 @@ module.exports = {
       models.messages.post(data, (err, result) => {
         if (err) {
           throw ('POST messages ERROR');
+          return;
         }
         res.writeHead(201, headers);
         res.end('OK');

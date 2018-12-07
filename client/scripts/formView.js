@@ -16,9 +16,17 @@ var FormView = {
       message: FormView.$form.find('#message').val(),
       roomname: Rooms.selected || 'lobby'
     };
+    // var message = {
+    //   username: 'jack',
+    //   message: 'jack,',
+    //   roomname: 'jack'
+    // };
+
+    $('#message').val('');
 
     Parse.create(message, (data) => {
-      console.log(message);
+
+      console.log(message, 'do i get in');
       console.log(data);
       _.extend(message, data);
       Messages.add(message, MessagesView.render);
